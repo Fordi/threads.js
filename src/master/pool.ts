@@ -393,7 +393,7 @@ class WorkerPool<ThreadType extends Thread> implements Pool<ThreadType> {
   }
 
   public async terminateThread(thread: ThreadType) {
-    const workers = await Promise.all(this.workers.map(descriptor => descriptor.init));
+    const workers = await Promise.all(this.workers.map(descriptor => descriptor.init)) as ThreadType[];
     const index = workers.indexOf(thread);
     if (index < 0) {
       return;

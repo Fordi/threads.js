@@ -9,7 +9,7 @@
     "moduleResolution": "node",
     "lib": ["es2015"],
     "outDir": "dist",
-    "strict": true
+    "strict": false
   },
   "include": [
     "./src/index.ts",
